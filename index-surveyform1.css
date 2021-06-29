@@ -1,0 +1,201 @@
+body {
+    background-attachment: fixed;
+    background-image: url("Screenshot-020.jpg"); 
+    background-size :  400px 200px;   
+    background-origin: content-box;  
+    background-repeat : repeat; 
+    background-color: darkcyan; /*  fallback */  
+    
+    margin: 0 auto;     
+}
+
+header {
+    
+    position: fixed;
+    top: 0;  
+}
+
+form {
+    position: absolute;
+}
+
+input, textarea {
+    font-size: 18px;
+    font-weight: 100;
+    width: 90%;  
+    margin: 2px;    
+    padding: 5px 0px;
+    border: 3px solid black;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+legend {
+    background-color: black;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+fieldset, p {
+    margin: 20px 10px;
+}
+
+
+button {
+    border: 2;
+    line-height: 2;
+    padding: 0 20px;
+    font-size: 18px;
+    text-align: center;
+    color: blue;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(133, 105, 105);   
+    box-shadow: inset 2px 2px 3px rgb(77, 77, 19),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+
+}
+
+
+/**  Responsive elements **/
+
+
+input:invalid, textarea:invalid {
+    border: 5px solid red;    
+}
+
+input:valid, textarea:valid {
+    border: 5px solid lime;    
+}
+
+input:active, select:active, textarea:active {
+    background: rgb(233, 233, 138);
+}
+
+
+/* id & class */
+
+#title {
+    font-size: 400%;
+    font-weight:200px;
+    color: black;
+    text-align: center;
+    margin:  auto;
+    padding: 5px 5px;   
+   
+}
+
+#description {    
+    font-family: italic  "Fira Sans", serif;
+    font-size: 200%;
+    color:  black;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 5px 5px;  
+       
+}
+
+#survey-form {
+    width: 800px;
+    height: 1200px;
+    margin: auto auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgb(76, 78, 72);
+    background-color: rgb(179, 154, 201);
+    font: small-caps bold 18px sans-serif; 
+    color: black;
+    text-shadow: none; 
+    display: block; 
+    
+    
+}
+
+#name-label, #email-label, #number-label {
+    font-size: inherit;
+    padding: 10px 5px;
+    margin-bottom: 10px;    
+    display: inline-block;
+    
+}
+
+
+
+#name, #email, #number {
+    width: 80%;
+    padding: 5px 5px;
+    margin: 5px 10px 5px 5px ;
+    font-size: 1.4em;
+    text-align: left;
+    display: inline-block;
+    
+}
+
+#dropdown, #dropdown2 {    
+    width: 80%;
+    display: table-row;
+    align-items: left;
+    margin: 0px;
+}
+
+
+#message {
+    
+}
+
+#submit:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+#submit:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+
+container {
+    width: 60em;
+    height: 100em;
+    display: flex;
+    flex-direction: column ;   
+    align-items: center;     
+    position: relative; 
+    top: 20px;
+   
+     
+}
+inner1 {
+    align-self: stretch;    
+    justify-self: center;   
+    position: absolute; 
+           
+}
+
+inner2 {
+    align-self: center;
+    justify-self: center;  
+    position: absolute;   
+    
+}
+
+
+.input-checkbox, .input-radio {
+    width: 100%;   
+    display: inline-block;
+    
+    
+}
+
+
+/* Device screen */
+
+@media (max-width: 480px) {  /* for  mobile fones */
+
+   
+}
+
