@@ -1,8 +1,9 @@
 * {
+    margin: 0;
+    padding: 0;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
-    
+    box-sizing: border-box;         /* Opera/IE 8+ */    
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     background-repeat : repeat; 
     /*  fallback */   
     
-    margin: 0 auto;     
+      
 }
 
 
@@ -138,12 +139,23 @@ body {
 /** class **/
 
 /** mobiles **/
-@media only screen and (max-width: 480px) {
-    body { 
-    font: 1.4em sans-serif;
-    line-height: 1.4;
-}
+
+@media only screen 
+  and (max-width: 768px) {
+  #image {  
+    height: 690px;
+    width: 630px;   
+  }
 }
 
 
+@media only screen 
+  and (max-width: 480px) {
+
+  #image {  
+    height: 440px;
+    width: 400px;   
+  }
+
+}
 
