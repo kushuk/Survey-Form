@@ -32,24 +32,21 @@ main {
 
 /* header  */
 
-#header {
-    
-    position: sticky;
+#header {    
+    position: fixed;
     top: 40px;
     left: 0;
 }
 
-#title {
-    
+#title {    
     font-style: oblique 40deg;
     font-size: 400%;
-    font-weight: 200px;
+    font-weight: 400;
     font-family: Impact, Haettenschweiler, sans-serif;    
     color: black;
     text-align: center;
     margin:  auto;
-    padding: 5px;   
-   
+    padding: 5px;    
 }
 
 #description {    
@@ -81,14 +78,12 @@ main {
 #survey-form p {
     margin: auto;
     display: flex;
-    flex-direction: column;
-   
+    flex-direction: column;   
 }
 
 #name-label,
 #email-label, 
-#number-label {
-    
+#number-label {    
     font-size: inherit;
     padding: 5px;
     margin-bottom: 10px;    
@@ -110,17 +105,17 @@ main {
 
 #dropdown,
 #dropdown2 {    
-    width: 80%;
+    width: 100%;
     display: inline-table;
-    align-items: left;
+    text-align: left;
     margin: auto;
 }
 
 
 #message {
-    width: 80%;
-     /* padding: 5px 5px; */
-    margin: 20px  ;
+    width: 100%;
+    padding: 5px; 
+    margin: auto   ;
     font-size: 1em;
     text-align: left;
     display: inline-block;    
