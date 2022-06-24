@@ -19,10 +19,10 @@ body {
 
 main {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     height: auto;
-    max-width: 1200px;
-    display: flex   ;
+    min-width: 480px;
+    display: flex ;
     flex-direction: column;
     justify-content: center ;
     align-items: center;
@@ -31,7 +31,8 @@ main {
 
 /* header  */
 
-#header {    
+#header {   
+    display: inline-block;
     position: fixed;
     top: 40px;
     left: 0;
@@ -39,21 +40,25 @@ main {
 
 #title {    
     font-style: oblique 40deg;
-    font-size: 400%;
-    font-weight: 400;
+    font-size: 500%;
+    font-weight: 600;
     font-family: Impact, Haettenschweiler, sans-serif;    
     color: black;
     text-align: center;
+    text-transform: uppercase; 
+    word-wrap: normal;
     margin:  auto;
-    padding: 5px;    
+    padding: 10px;    
 }
 
 #description {    
     font: italic  2.0em/2.2 Arial, sans-serif;    
     color:  black;
     text-align: center;
+    text-transform: capitalize; 
+    word-wrap: normal;
     margin: auto;
-    padding: 5px ;    
+    padding: 10px ;    
 }
 
 #survey-form {
@@ -61,23 +66,27 @@ main {
     flex-direction: column; 
     align-items: center ;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     width: 80%;
     height: auto;   
-    padding: 20px;
+    padding: 16px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgb(76, 78, 72);
     background-color: rgb(179, 154, 201);
     font: small-caps bold 18px sans-serif; 
     color: black;   
     position: relative;
+    top: 400px;
+    left: 0;
     
 }
 
-#survey-form p {
+#survey-form div,
+#survey-form fieldset {
     margin: auto;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column; 
+    gap: 6px ;  
 }
 
 #name-label,
@@ -98,8 +107,7 @@ main {
     margin: auto ;
     font-size: 1.4em;
     text-align: left;
-    display: inline-block;
-    
+    display: block;    
 }
 
 #dropdown,
@@ -136,7 +144,7 @@ main {
 }
 
 #submit {
-    display: inline-block;
+    display: block;
     border: 2px;
     line-height: 2;
     padding: 0 10px;
@@ -169,9 +177,10 @@ main {
    {
 
     #survey-form {
-        display: flex;
         
-        width: 70%;
+        top: 450px;
+        left: 0;       
+        
 }
 }
 
