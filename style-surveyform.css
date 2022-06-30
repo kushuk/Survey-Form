@@ -1,58 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */    
+}
+
+html,
 body {
+    min-height: 100vh;
+    width: 100vw;
+    height: auto;
+    min-width: 580px;
     background-attachment: fixed;
     background-image: url("Screenshot-020.jpg"); 
     background-size :  400px 200px;   
     background-origin: content-box;  
     background-repeat : repeat; 
-    /*  fallback */   
-    
-    margin: 0 auto;     
+    /*  fallback */ 
 }
 
+#main {
+   
+    display: flex ;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    position: relative;    
+}
 
-/* id  */
+/* header  */
 
-#title {
+#header {   
+    display: block;
+    position: relative;
+    
+}
+
+#title {    
     font-style: oblique 40deg;
-    font-size: 400%;
-    font-weight: 200px;
+    font-size: 500%;
+    font-weight: 600;
     font-family: Impact, Haettenschweiler, sans-serif;    
     color: black;
     text-align: center;
+    text-transform: uppercase; 
+    word-wrap: normal;
     margin:  auto;
-    padding: 5px 5px;    
-    position: relative;   
+    padding: 10px;  
+    position: sticky;  
+    
+    
 }
 
 #description {    
     font: italic  2.0em/2.2 Arial, sans-serif;    
     color:  black;
     text-align: center;
+    text-transform: capitalize; 
+    word-wrap: normal;
     margin: auto;
-    padding: 5px 5px;
-    position: relative; 
-    
+    padding: 10px ;  
+    position: relative;  
+    top: 200px;
 }
 
 #survey-form {
-    width: 800px;
-    height: 1400px;
-    margin: auto auto;
-    padding: 20px;
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center ;
+    justify-content: center;
+    gap: 8px;
+    width: 80%;
+    height: auto;   
+    padding: 16px;
+    border-radius: 10px;
     box-shadow: 3px 3px 10px rgb(76, 78, 72);
     background-color: rgb(179, 154, 201);
     font: small-caps bold 18px sans-serif; 
     color: black;   
-    display: block;
     position: relative;
+    top: 200px;
+    left: 0;
+    
+}
+
+#survey-form div,
+#survey-form fieldset {
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 6px ;  
 }
 
 #name-label,
 #email-label, 
-#number-label {
+#number-label {    
     font-size: inherit;
-    padding: 10px 5px;
+    padding: 5px;
     margin-bottom: 10px;    
     display: inline-block;    
 }
@@ -61,28 +106,27 @@ body {
 #name,
 #email,
 #number {
-    width: 80%;
-    padding: 5px 5px;
-    margin: 5px 10px 5px 5px ;
+    width: 100%;
+    padding: 10px;
+    margin: auto ;
     font-size: 1.4em;
     text-align: left;
-    display: inline-block;
-    
+    display: block;    
 }
 
 #dropdown,
 #dropdown2 {    
-    width: 80%;
-    display: table-row;
-    align-items: left;
+    width: 100%;
+    display: inline-table;
+    text-align: left;
     margin: auto;
 }
 
 
 #message {
-    width: 80%;
-    padding: 5px 5px;
-    margin: 20px 10px 5px 5px ;
+    width: 100%;
+    padding: 5px; 
+    margin: auto   ;
     font-size: 1em;
     text-align: left;
     display: inline-block;    
@@ -104,6 +148,7 @@ body {
 }
 
 #submit {
+    display: block;
     border: 2px;
     line-height: 2;
     padding: 0 10px;
@@ -115,7 +160,6 @@ body {
     background-color: rgb(133, 105, 105);   
     box-shadow: inset 2px 2px 3px rgb(77, 77, 19),
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
-
 }
 
 
@@ -131,12 +175,16 @@ body {
 /** class **/
 
 /** mobiles **/
-@media (max-width: 480px) {
-    body { 
-    font: 1.4em sans-serif;
-    line-height: 1.4;
+
+@media only screen 
+  and (max-width: 570px)
+   {
+
+    #survey-form {
+        
+        top: 450px;
+        left: 0;       
+        
 }
 }
-
-
 
