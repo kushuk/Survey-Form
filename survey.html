@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>     
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link href="style-survey.css" rel="stylesheet"/>        
+      <title>Rudy's FreeCodeCamp Survey Project</title>
+    </head>  
+
+    <body>
+       <main id="main">               
+              <header id="header">
+                     <h1 id="title">FreeCodeCamp Survey</h1>
+                     <p id="description"><em>Thank you for taking the time to fill in this survey 
+                                                        and  help us improve the platform</em></p> 
+              </header>
+              <form  id="survey-form" action="#" method="POST">                    
+                     <div>                            
+                            <label for="name" id="name-label">Enter your Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your Name here" 
+                                   minlength="4" maxlength="48"  required>
+                      
+                            <!-- My Reminder: email validation appears to work, pattern not working correctly-->                           
+                      
+                            <label for="email" id="email-label">Enter your Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your Email here" 
+                                 title="type lowercase letters only" pattern="[a-z]{2, 16}[0-9]+@[a-z]+.[a-z]{2, 3}" 
+                                 size="16"  maxlength="32" required>
+                     
+                     
+                            <label for="number" id="number-label">Enter your Age:</label>
+                            <input type="number" id="number" name="age" placeholder="Enter your Age here"
+                                 min="16" max="99" required>
+                     
+                            <hr> <hr>
+                     
+                            <label for="dropdown">Which option best describes your current role? </label>
+                            <select  id="dropdown" name="Current-role">
+                                   <option value=""> --Please choose an option-- </option>
+                                   <option value="web-developer">Web-Developer</option>
+                                   <option value="backend-developer">BackEnd developer</option>
+                                   <option value="techinical-writer">Techinical Writer</option>
+                                   <option value="apps-developer">App Developer</option>
+                                   <option value="un-employed">Un-employed</option>
+                            </select>
+                            <fieldset>                          
+                                   <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                                   
+                                   <input type="radio" class="input-radio" id="input-radio-yes"   
+                                          name="Survey-recommendation" value="Yes-to-survey" checked/>
+                                   <label for="input-radio-yes">YES, most definitely!</label><br>                        
+                                                               
+                                   <input type="radio" class="input-radio" id="input-radio-maybe" 
+                                          name="Survey-recommendation" value="Maybe-to-survey"/>
+                                   <label for="input-radio-maybe">Maybe, I not sure.</label><br>                              
+                                   
+                                   <input type="radio" class="input-radio" id="input-radio-no"    
+                                          name="Survey-recommendation" value="No-to-survey"/>
+                                   <label for="input-radio-no">NO, not now!</label><br>                      
+                            </fieldset>
+                            <label for="dropdown2">What is your favorite feature of freeCodeCamp?</label>
+                            <select  id="dropdown2" name="Survey-favorite">
+                              <option value=""> --Please choose an option-- </option>
+                              <option value="youtube-vidoes"> Youtube-Videos</option>
+                              <option value="challanges">Challanges</option>
+                              <option value="projects">Projects</option>
+                              <option value="Challanges">Challanges</option>
+                            </select>
+                            <fieldset>                          
+                                   <legend>What would you like to see improved? (Tick any the box that apply)</legend>
+                                   
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-frontend" 
+                                      name="Survey-improvements" value="FrontEnd-projects"/>
+                                   <label for="input-checkbox-frontend">Front-end Projects</label><br>    
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-backend" 
+                                      name="Survey-improvements" value="BackEnd-projects"/>
+                                   <label for="input-checkbox-backend">Back-end Projects</label><br>                             
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-visualiztaion" 
+                                      name="Survey-improvements" value="Data-Visualiztaion"/>
+                                   <label for="input-checkbox-visualiztaion">Data Visualization</label><br>    
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-challenges" 
+                                      name="Survey-improvements" value="Challenges"/>
+                                   <label for="challenges">Challenges</label><br>    
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-oscommunity" 
+                                      name="Survey-improvements" value="OpenSource-Community"/>
+                                   <label for="input-checkbox-oscommunity">Open Source Community</label><br>    
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-gitterhelp-rooms" 
+                                      name="Survey-improvements" value="Gitterhelp-rooms"/>
+                                   <label for="input-checkbox-gitterhelp-rooms" >Gitter help rooms</label><br>    
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-videos" 
+                                      name="Survey-improvements" value="Videos"/>
+                                   <label for="input-checkbox-videos">Videos</label><br>    
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-wiki" 
+                                      name="Survey-improvements" value="Wiki"/>
+                                   <label for="input-checkbox-wiki">Wiki</label><br>                              
+                              
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-forum" 
+                                      name="Survey-improvements" value="Forum"/>
+                                   <label for="input-checkbox-forum">Forum</label><br>
+       
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-city-meetups"                         
+                                      name="Survey-improvements" value="City-meetups"/>
+                                   <label for="input-checkbox-city-meetups">City Meetups</label><br>
+                               
+                                   <input type="checkbox" class="input-checkbox" id="input-checkbox-additional-courses" 
+                                      name="Survey-improvements" value="Additional-Courses"/>
+                                   <label for="input-checkbox-additional-courses">Additional Courses</label>
+                            </fieldset>
+                            <label for="message">Do you have any comments or suggestions?, please enter here...</label>
+                            <textarea id="message" name="massage" placeholder="Type your message" 
+                                    rows="5" cols="30" minlength="10" maxlength="30">
+                            </textarea>   
+                            <button type="submit" id="submit" value="post">Submit</button>                             
+                     
+                     </div>           
+              </form>              
+       </main>
+       <!-- This document validates as CSS level 3 + SVG !  -->
+       
+       <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" rel="stylesheet" type="text/javascript" > 
+       </script>
+    </body>    
+</html>
