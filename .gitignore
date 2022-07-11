@@ -2,5 +2,9 @@ log/
 txt/
 main.log
 master.log
-**0.*
-**00.*
+/log
+
+**-0.html
+**-0.css
+.vcode
+./vcode
